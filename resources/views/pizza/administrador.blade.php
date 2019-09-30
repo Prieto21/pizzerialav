@@ -236,23 +236,23 @@
             </div>
             <div class="modal-body">
   
-  
-              <h6>Nombre del producto:</h6> <input type="text" name="" id="" placeholder="ingrese el nombre"><br>
-              <h6>IMP del producto:</h6> <input type="text" name="" id=""placeholder="ingrese el IMP"><br>
-              <h6>valor del producto:</h6> <input type="text" name="" id=""placeholder="ingrese el valor"><br>
+            <form action="{{ route('saporipizza.store') }}" method="POST">
+    @csrf
+    <input type="hidden" name="urlimg" value="imagenes/fondo.jpg">
+              <h6>Nombre del producto:</h6> <input type="text" name="nombre_producto" id="" placeholder="ingrese el nombre"><br>
+              <h6>valor del producto:</h6> <input type="text" name="valor" id=""placeholder="ingrese el valor"><br>
               <br>
-              <form enctype="multipart/form-data" action="uploader.php" method="POST">
-                      <input name="uploadedfile" type="file" />
-                      
+              <div class="modal-footer">
+
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                  
+                    <button type="submit" class="btn btn-success">Agregar</button>
+              
+      
+                </div>
                     </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
-              <a href="http://localhost/pizzerialav/public/administrador">
-                <button type="button" class="btn btn-success">Confirmar</button>
-              </a>
-  
-            </div>
+           
           </div>
         </div>
       </div>

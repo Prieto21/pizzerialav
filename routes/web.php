@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('saporipizza', 'PaginasController');
+Route::resource('saporipizza', 'ProductosController');
 
 Route::get('/registro', function () {
     return view('pizza.login');
@@ -23,15 +23,18 @@ Route::get('/registro', function () {
 Route::get('/ingreso', function () {
     return view('pizza.alertLogin');
 });
-Route::get('/sapori/inicio', function () {
-    return view('pizza.principal');
-});
+
+Route::get('/sapori/inicio', 'ProductosController@index2');
+
+
 Route::get('/sapori/pedido', function () {
     return view('pizza.domicilio');
 });
-Route::get('/sapori/cuenta', function () {
-    return view('pizza.usuprincipal');
-});
+
+
+Route::get('/sapori/cuenta', 'ProductosController@index3');
+
+
 Route::get('/cuenta/informacion', function () {
     return view('pizza.usuinformacion');
 });

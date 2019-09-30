@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\productos;
 use Illuminate\Http\Request;
 
-class PaginasController extends Controller
+class ProductosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +16,20 @@ class PaginasController extends Controller
     {
         //
         return view('pizza.entrada');
+    }
+    public function index2()
+    {
+        //
+        $productos=productos::all();
+       
+        return view('pizza.principal',compact('productos'));
+    }
+    public function index3()
+    {
+        //
+        $productos=productos::all();
+       
+        return view('pizza.usuprincipal',compact('productos'));
     }
 
     /**
@@ -36,15 +51,23 @@ class PaginasController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'urlimg'=>'required',
+            'nombre_producto'=>'required',
+            'valor'=>'required'
+        ]);
+        productos::create($request->all());
+        return view('pizza.administrador');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\productos  $productos
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(productos $productos)
     {
         //
     }
@@ -52,10 +75,10 @@ class PaginasController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\productos  $productos
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(productos $productos)
     {
         //
     }
@@ -64,10 +87,10 @@ class PaginasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\productos  $productos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, productos $productos)
     {
         //
     }
@@ -75,10 +98,10 @@ class PaginasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\productos  $productos
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(productos $productos)
     {
         //
     }
