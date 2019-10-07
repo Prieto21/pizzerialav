@@ -11,33 +11,7 @@
     </head>
 
     <body div class="fondo" background="{{asset('/imagenes/fondo.jpg')}}">
-        <nav class="navbar navbar-dark bg-warning">
-            <span class="navbar-brand mb-0 h1">
-                <!-- Example single danger button -->
-                
-    <div class="btn-group">
-      <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Perfil
-      </button>
-      <div class="dropdown-menu">
-      <a class="dropdown-item" href="http://localhost/pizzerialav/public/sapori/cuenta">Inicio</a>
-        <a class="dropdown-item" href="http://localhost/pizzerialav/public/cuenta/informacion">Información</a>
-        <a class="dropdown-item" href="http://localhost/pizzerialav/public/cuenta/historial">Historial de pedidos</a>
-        
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="http://localhost/pizzerialav/public/registro">Cerrar sesión</a>
-      </div>
-    </div>
-                
-            </span>
-            <div class="form-inline my-2 my-lg-0">
-            <h4><em>Sapori D’italia</em></h4>
-               
-                
-    
-            </div>
-            
-        </nav>
+
     
 
     @yield('contenido')

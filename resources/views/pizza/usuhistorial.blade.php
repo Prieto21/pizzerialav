@@ -1,4 +1,5 @@
 @extends('pizza.layoutusu')
+@extends('layouts.app')
 @section('contenido')
     
 

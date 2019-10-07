@@ -1,5 +1,6 @@
 @extends('pizza.layout')
 
+
 @section('contenido')
 <nav class="navbar navbar-dark bg-warning">
     <span class="navbar-brand mb-0 h1">
@@ -74,8 +75,8 @@
     <div class="col-lg-4 col-md-4 col-12">
        
         <div class="card">
-                {{ $user->urlimg}}
-            <img class="card-img-top" src="{{$user->urlimg}}" alt="Card image cap">
+               
+            <img class="card-img-top"  src="{{$user->urlimg}}" alt="Card image cap">
             <div class="card-body">
 
                 <center><h5 class="card-title">{{$user->nombre_producto}}</h5></center>

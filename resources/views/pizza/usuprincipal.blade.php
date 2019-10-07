@@ -1,7 +1,17 @@
 @extends('pizza.layoutusu')
+@extends('layouts.app')
+@section('content')
+@if (session('status'))
+<div class="alert alert-success" role="alert">
+    {{ session('status') }}
+</div>
+@endif
+@endsection
+
+
 @section('contenido')
     
-<body div class="fondo" background="{{asset('/imagenes/fondo.jpg')}}">
+
    
 
     <!-- Productos -->

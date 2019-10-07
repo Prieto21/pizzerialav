@@ -31,7 +31,7 @@
         <tr>
 
             <td>
-                <center><a href="http://localhost/pizzerialav/public/registro"><button type="submit" class="btn  btn-lg btn-block  btn-outline-warning ">
+                <center><a href="http://localhost/pizzerialav/public/login"><button type="submit" class="btn  btn-lg btn-block  btn-outline-warning ">
                         <h4>Empezar</h4>
                     </button></a></center>
             </td>

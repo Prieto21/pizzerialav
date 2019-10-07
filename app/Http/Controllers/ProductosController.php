@@ -27,6 +27,14 @@ class ProductosController extends Controller
     public function index3()
     {
         //
+        
+        
+        return redirect('/sapori/cuenta');
+        
+    }
+    public function index4()
+    {
+        //
         $productos=productos::all();
        
         return view('pizza.usuprincipal',compact('productos'));

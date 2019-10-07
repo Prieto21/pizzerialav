@@ -32,7 +32,7 @@ Route::get('/sapori/pedido', function () {
 });
 
 
-Route::get('/sapori/cuenta', 'ProductosController@index3');
+Route::get('/sapori/cuenta', 'ProductosController@index4');
 
 
 Route::get('/cuenta/informacion', function () {
@@ -49,3 +49,7 @@ Route::get('/administrador', function () {
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'ProductosController@index3')->name('home');
